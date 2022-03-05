@@ -1,0 +1,9 @@
+{
+	"name": "researchram261292",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "8271655f-10fd-4ba9-bfb6-5c8e95e85a48",
+		"tenantId": "482198bb-ae7b-4b25-8b7a-6d7f32faa083"
+	}
+}
