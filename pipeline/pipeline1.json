@@ -1,0 +1,243 @@
+{
+	"name": "pipeline1",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy data1",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "AzureSqlSink",
+						"writeBehavior": "insert",
+						"sqlWriterUseTableLock": false,
+						"tableOption": "autoCreate",
+						"disableMetricsCollection": false
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "Region",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Region",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Country",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Country",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Item Type",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Item Type",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Sales Channel",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Sales Channel",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Order Priority",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Order Priority",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Order Date",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Order Date",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Order ID",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Order ID",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Ship Date",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Ship Date",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Units Sold",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Units Sold",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Unit Price",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Unit Price",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Unit Cost",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Unit Cost",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Total Revenue",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Total Revenue",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Total Cost",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Total Cost",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Total Profit",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Total Profit",
+									"type": "String",
+									"physicalType": "String"
+								}
+							}
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "source",
+						"type": "DatasetReference",
+						"parameters": {
+							"fileName": {
+								"value": "@pipeline().parameters.fname",
+								"type": "Expression"
+							}
+						}
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "destination",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"parameters": {
+			"fname": {
+				"type": "string"
+			}
+		},
+		"annotations": []
+	}
+}
