@@ -28,7 +28,7 @@
 					},
 					"sink": {
 						"type": "AzureSqlSink",
-						"preCopyScript": "ALTER TABLE dbo.sales\nALTER COLUMN [Total Profit] float\nALTER TABLE dbo.sales\nALTER COLUMN [Total Cost] float\nALTER TABLE dbo.sales\nALTER COLUMN [Total Revenue] float;",
+						"preCopyScript": "Truncate table dbo.sales_01",
 						"writeBehavior": "insert",
 						"sqlWriterUseTableLock": false,
 						"tableOption": "autoCreate",
