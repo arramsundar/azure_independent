@@ -46,7 +46,7 @@
 								"sink": {
 									"name": "Region",
 									"type": "String",
-									"physicalType": "String"
+									"physicalType": "nvarchar"
 								}
 							},
 							{
@@ -58,7 +58,7 @@
 								"sink": {
 									"name": "Country",
 									"type": "String",
-									"physicalType": "String"
+									"physicalType": "nvarchar"
 								}
 							},
 							{
@@ -70,7 +70,7 @@
 								"sink": {
 									"name": "Item Type",
 									"type": "String",
-									"physicalType": "String"
+									"physicalType": "nvarchar"
 								}
 							},
 							{
@@ -82,7 +82,7 @@
 								"sink": {
 									"name": "Sales Channel",
 									"type": "String",
-									"physicalType": "String"
+									"physicalType": "nvarchar"
 								}
 							},
 							{
@@ -94,7 +94,7 @@
 								"sink": {
 									"name": "Order Priority",
 									"type": "String",
-									"physicalType": "String"
+									"physicalType": "nvarchar"
 								}
 							},
 							{
@@ -106,7 +106,7 @@
 								"sink": {
 									"name": "Order Date",
 									"type": "String",
-									"physicalType": "String"
+									"physicalType": "nvarchar"
 								}
 							},
 							{
@@ -118,7 +118,7 @@
 								"sink": {
 									"name": "Order ID",
 									"type": "String",
-									"physicalType": "String"
+									"physicalType": "nvarchar"
 								}
 							},
 							{
@@ -130,7 +130,7 @@
 								"sink": {
 									"name": "Ship Date",
 									"type": "String",
-									"physicalType": "String"
+									"physicalType": "nvarchar"
 								}
 							},
 							{
@@ -141,8 +141,8 @@
 								},
 								"sink": {
 									"name": "Units Sold",
-									"type": "String",
-									"physicalType": "String"
+									"type": "Int32",
+									"physicalType": "int"
 								}
 							},
 							{
@@ -153,8 +153,8 @@
 								},
 								"sink": {
 									"name": "Unit Price",
-									"type": "String",
-									"physicalType": "String"
+									"type": "Double",
+									"physicalType": "float"
 								}
 							},
 							{
@@ -165,8 +165,8 @@
 								},
 								"sink": {
 									"name": "Unit Cost",
-									"type": "String",
-									"physicalType": "String"
+									"type": "Double",
+									"physicalType": "float"
 								}
 							},
 							{
@@ -177,8 +177,8 @@
 								},
 								"sink": {
 									"name": "Total Revenue",
-									"type": "String",
-									"physicalType": "String"
+									"type": "Double",
+									"physicalType": "float"
 								}
 							},
 							{
@@ -189,8 +189,8 @@
 								},
 								"sink": {
 									"name": "Total Cost",
-									"type": "String",
-									"physicalType": "String"
+									"type": "Double",
+									"physicalType": "float"
 								}
 							},
 							{
@@ -201,8 +201,8 @@
 								},
 								"sink": {
 									"name": "Total Profit",
-									"type": "String",
-									"physicalType": "String"
+									"type": "Double",
+									"physicalType": "float"
 								}
 							}
 						],
