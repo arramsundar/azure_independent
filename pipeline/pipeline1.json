@@ -31,7 +31,6 @@
 						"preCopyScript": "Truncate table dbo.sales_01",
 						"writeBehavior": "insert",
 						"sqlWriterUseTableLock": false,
-						"tableOption": "autoCreate",
 						"disableMetricsCollection": false
 					},
 					"enableStaging": false,
